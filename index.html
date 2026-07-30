@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patch Atlas - Personal Developer Issue Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">Personal debugging knowledge base</p>
+            <h1>Patch Atlas</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="ghost-button" id="createButton" type="button">New Defect</button>
+          <button class="primary-button" id="savedButton" type="button">Saved <span id="savedCount">0</span></button>
+        </div>
+      </header>
+
+      <section class="control-band" aria-label="Search and filters">
+        <div class="search-wrap">
+          <label for="searchInput">Search issues, symptoms, tags, or code</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Try: React infinite render, Git rebase, SQL injection, Angular Observable..." />
+        </div>
+      </section>
+
+      <main class="workspace">
+        <aside class="filter-panel" aria-label="Filters">
+          <div class="panel-section">
+            <div class="section-title">Stack</div>
+            <div id="stackFilters" class="chip-list"></div>
+          </div>
+        </aside>
+
+        <section class="results-panel" aria-label="Scenario results">
+          <div class="results-toolbar">
+            <div>
+              <h2>Developer Issues</h2>
+              <p id="resultMeta">Generated from common failure patterns across daily engineering work.</p>
+            </div>
+            <select id="sortSelect" aria-label="Sort scenarios">
+              <option value="relevance">Sort by relevance</option>
+              <option value="severity">Sort by severity</option>
+              <option value="stack">Sort by stack</option>
+              <option value="title">Sort by title</option>
+            </select>
+          </div>
+          <div id="scenarioList" class="scenario-list"></div>
+          <div class="pagination">
+            <button id="prevPage" type="button">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" type="button">Next</button>
+          </div>
+        </section>
+
+        <section class="detail-panel" aria-label="Selected scenario">
+          <div id="scenarioDetail" class="detail-empty">
+            <div class="empty-visual" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <h2>No issue selected</h2>
+            <p>Ready when you are.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="scenarioCardTemplate">
+      <article class="scenario-card">
+        <button type="button" class="card-main">
+          <span class="card-topline">
+            <span class="stack-pill"></span>
+            <span class="severity-pill"></span>
+          </span>
+          <strong></strong>
+          <span class="card-summary"></span>
+          <span class="tag-row"></span>
+        </button>
+      </article>
+    </template>
+
+    <dialog id="defectDialog" class="modal">
+      <form id="defectForm" class="modal-panel">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Local custom entry</p>
+            <h2>Create Defect</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-dialog aria-label="Close">x</button>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>Title</span>
+            <input id="defectTitle" required placeholder="Example: React custom multiselect loses selected values" />
+          </label>
+          <label>
+            <span>Stack</span>
+            <select id="defectStack" required></select>
+          </label>
+          <label>
+            <span>Category</span>
+            <input id="defectCategory" required value="Custom defects" />
+          </label>
+          <label>
+            <span>Severity</span>
+            <select id="defectSeverity">
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="critical">Critical</option>
+            </select>
+          </label>
+          <label class="wide">
+            <span>Description</span>
+            <textarea id="defectSummary" required rows="3"></textarea>
+          </label>
+          <label class="wide">
+            <span>Symptoms, one per line</span>
+            <textarea id="defectSymptoms" rows="4"></textarea>
+          </label>
+          <label class="wide">
+            <span>Root Cause</span>
+            <textarea id="defectCause" rows="3"></textarea>
+          </label>
+          <label class="wide">
+            <span>Defective Code</span>
+            <textarea id="defectBadCode" rows="7" spellcheck="false"></textarea>
+          </label>
+          <label class="wide">
+            <span>Fixed Code</span>
+            <textarea id="defectGoodCode" rows="7" spellcheck="false"></textarea>
+          </label>
+          <label class="wide">
+            <span>Solutions, one per line</span>
+            <textarea id="defectSolutions" rows="5"></textarea>
+          </label>
+        </div>
+        <div class="modal-actions">
+          <button class="ghost-button" type="button" data-close-dialog>Cancel</button>
+          <button class="primary-button" type="submit">Save Defect</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="descriptionDialog" class="modal">
+      <form id="descriptionForm" class="modal-panel compact">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Edit item text</p>
+            <h2>Edit Description</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-description aria-label="Close">x</button>
+        </div>
+        <label>
+          <span>Description</span>
+          <textarea id="descriptionText" required rows="6"></textarea>
+        </label>
+        <div class="modal-actions">
+          <button class="ghost-button" type="button" data-close-description>Cancel</button>
+          <button class="primary-button" type="submit">Save Description</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
