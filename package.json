@@ -1,0 +1,19 @@
+{
+  "name": "patch-atlas",
+  "version": "2.0.0",
+  "private": true,
+  "description": "An offline-first debugging field manual for developers.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "npm run test:content && playwright test",
+    "test:content": "node --test tests/content.test.cjs tests/stackoverflow.test.cjs",
+    "import:stackoverflow": "python scripts/import_stackoverflow.py",
+    "test:browser": "playwright test",
+    "format": "prettier --write app.js data.js styles.css index.html sw.js legacy.js scripts tests *.cjs *.json *.webmanifest README.md"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.56.0",
+    "prettier": "^3.9.10"
+  }
+}

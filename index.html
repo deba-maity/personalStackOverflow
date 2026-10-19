@@ -3,216 +3,620 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#173e35" />
+    <meta
+      name="description"
+      content="Your debugging field manual. Distinct problems, practical fixes, and a personal knowledge base that works without AI or an internet connection."
+    />
     <title>Personal Stack Overflow</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("patchAtlasTheme") || "light";
+      } catch {}
+    </script>
+    <script src="data.js" defer></script>
+    <script src="stackoverflow-data.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="app-shell">
+    <a class="skip-link" href="#main">Skip to guides</a>
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="./index.html" aria-label="Patch Atlas home"
+        ><span class="brand-symbol" aria-hidden="true">P<span>↗</span></span
+        ><span
+          >patch<span class="brand-atlas">atlas</span
+          ><small>THE DEVELOPER'S FIELD MANUAL</small></span
+        ></a
+      >
+      <div class="sidebar-section-label">YOUR WORKSPACE</div>
+      <nav class="workspace-nav" aria-label="Library">
+        <button class="nav-item active" data-view="all" type="button">
+          <span data-icon="library"></span>All guides
+          <span class="nav-count" id="allCount">0</span>
+        </button>
+        <button class="nav-item" data-view="saved" type="button">
+          <span data-icon="bookmark"></span>Bookmarks
+          <span class="nav-count" id="savedCount">0</span>
+        </button>
+        <button class="nav-item" data-view="resolved" type="button">
+          <span data-icon="check"></span>Resolved
+          <span class="nav-count" id="resolvedCount">0</span>
+        </button>
+        <button class="nav-item" data-view="custom" type="button">
+          <span data-icon="notebook"></span>My field notes
+          <span class="nav-count" id="customCount">0</span>
+        </button>
+      </nav>
+      <div class="sidebar-section-label stack-label">
+        EXPLORE BY STACK
+        <button id="clearStack" type="button" hidden>Reset</button>
+      </div>
+      <nav
+        id="stackFilters"
+        class="stack-filters"
+        aria-label="Technology filters"
+      ></nav>
+      <button
+        class="show-stacks"
+        id="showStacks"
+        type="button"
+        aria-expanded="false"
+      >
+        Show all stacks <span>↓</span>
+      </button>
+      <div class="sidebar-bottom">
+        <div class="local-card">
+          <span class="status-dot"></span
+          ><strong>Your knowledge. Your machine.</strong>
+          <p>
+            No accounts. No API keys.<br />Just you, getting things working.
+          </p>
+        </div>
+        <button id="exportManualButton" class="export-manual" type="button">
+          <span data-icon="book"></span>Download field manual <span>↗</span>
+        </button>
+        <div class="sidebar-tools">
+          <button id="backupButton" type="button">
+            <span data-icon="download"></span>Backup</button
+          ><button id="importButton" type="button">
+            <span data-icon="upload"></span>Restore
+          </button>
+        </div>
+        <input
+          id="importFile"
+          type="file"
+          accept="application/json,.json"
+          hidden
+        />
+        <p class="edition">INDEPENDENT BY DESIGN <span>v2.0</span></p>
+      </div>
+    </aside>
+    <div class="page-shell">
       <header class="topbar">
-        <div class="brand-block">
-          <div class="brand-mark" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div>
-            <!-- <p class="eyebrow">Personal debugging knowledge base</p> -->
-            <h1>Personal Stack Overflow</h1>
-          </div>
+        <div class="breadcrumb">
+          <button
+            class="icon-button mobile-menu"
+            id="menuButton"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            <span data-icon="menu"></span></button
+          ><span>Workspace</span><span class="breadcrumb-slash">/</span
+          ><strong id="breadcrumbTitle">All guides</strong>
         </div>
         <div class="top-actions">
-          <button class="ghost-button" id="createButton" type="button">
-            New Defect
-          </button>
-          <button class="primary-button" id="savedButton" type="button">
-            Saved <span id="savedCount">0</span>
+          <span class="connection-state" id="connectionState"
+            ><span class="status-dot"></span
+            ><span id="connectionText">Local library</span></span
+          ><button
+            class="icon-button"
+            id="themeButton"
+            type="button"
+            aria-label="Switch color theme"
+          >
+            <span data-icon="sun"></span></button
+          ><button
+            class="icon-button"
+            id="helpButton"
+            type="button"
+            aria-label="Keyboard shortcuts"
+          >
+            <span data-icon="help"></span></button
+          ><button class="primary-button" id="createButton" type="button">
+            <span data-icon="plus"></span>New field note
           </button>
         </div>
       </header>
-
-      <section class="control-band" aria-label="Search and filters">
-        <div class="search-wrap">
-          <label for="searchInput"
-            >Search issues, symptoms, tags, or code</label
-          >
-          <input
-            id="searchInput"
-            type="search"
-            autocomplete="off"
-            placeholder="Try: React infinite render, Git rebase, SQL injection, Angular Observable..."
-          />
-        </div>
-      </section>
-
-      <main class="workspace">
-        <aside class="filter-panel" aria-label="Filters">
-          <div class="panel-section">
-            <div class="section-title">Stack</div>
-            <div id="stackFilters" class="chip-list"></div>
+      <main id="main" tabindex="-1">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span class="tiny-cross">✳</span> LESS GUESSWORK. MORE GETTING IT.
+            </div>
+            <h1 id="heroTitle">
+              Good fixes.<br />Even when AI goes dark<span class="accent-period"
+                >.</span
+              >
+            </h1>
+            <p>
+              A little less dependency. A lot more understanding.<br />
+              Your personal atlas of bugs, breakthroughs, and the fixes that
+              stick.
+            </p>
+            <div class="hero-meta">
+              <span
+                ><span data-icon="book"></span
+                ><strong id="guideCount">0</strong> distinct guides</span
+              ><span class="meta-divider"></span
+              ><span
+                ><span data-icon="layers"></span
+                ><strong id="stackCount">20</strong> stacks covered</span
+              ><span class="meta-divider"></span
+              ><span><span data-icon="wifi-off"></span>Zero AI required</span>
+            </div>
           </div>
-        </aside>
-
-        <section class="results-panel" aria-label="Scenario results">
-          <div class="results-toolbar">
-            <div>
-              <h2>Developer Issues</h2>
-              <p id="resultMeta">
-                Generated from common failure patterns across daily engineering
-                work.
+          <div class="atlas-art" aria-hidden="true">
+            <div class="art-coordinate">40° 42′ N &nbsp; 74° 00′ W</div>
+            <svg viewBox="0 0 320 240" fill="none">
+              <defs>
+                <pattern
+                  id="grid"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 20 0 L 0 0 0 20"
+                    stroke="currentColor"
+                    stroke-opacity=".14"
+                  />
+                </pattern>
+              </defs>
+              <rect x="10" y="10" width="300" height="220" fill="url(#grid)" />
+              <path
+                d="M39 155C31 101 80 51 135 69C172 14 256 48 260 105C308 143 260 205 206 184C153 224 83 202 86 167C65 181 43 175 39 155Z"
+                stroke="currentColor"
+                stroke-opacity=".24"
+              />
+              <path
+                d="M61 144C52 104 93 74 135 89C180 45 239 66 239 113C276 145 248 182 204 164C166 201 104 181 109 151C86 163 65 158 61 144Z"
+                stroke="currentColor"
+                stroke-opacity=".32"
+              />
+              <path
+                d="M83 132C79 102 112 94 140 110C179 69 218 87 218 121C241 139 229 161 201 146C164 176 132 161 130 140C108 146 88 149 83 132Z"
+                stroke="currentColor"
+                stroke-opacity=".4"
+              />
+              <path
+                d="M80 174L137 123L197 139L248 75"
+                stroke="currentColor"
+                stroke-dasharray="4 5"
+                stroke-opacity=".65"
+              />
+              <circle
+                cx="80"
+                cy="174"
+                r="5"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle cx="197" cy="139" r="4" fill="currentColor" />
+              <circle
+                cx="248"
+                cy="75"
+                r="5"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <rect
+                x="111"
+                y="97"
+                width="52"
+                height="52"
+                rx="12"
+                fill="var(--accent)"
+              />
+              <path
+                d="M130 114L121 123L130 132M144 114L153 123L144 132"
+                stroke="#fff"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M275 169V191M264 180H286"
+                stroke="currentColor"
+                stroke-opacity=".5"
+              />
+              <text
+                x="57"
+                y="197"
+                fill="currentColor"
+                font-size="9"
+                font-family="monospace"
+              >
+                YOU ARE HERE
+              </text>
+            </svg>
+            <div class="art-caption">
+              <span class="status-dot"></span>A WAY THROUGH, NOT A SHORTCUT.
+            </div>
+          </div>
+        </section>
+        <section class="search-section" aria-label="Search guides">
+          <div class="search-box">
+            <span data-icon="search"></span
+            ><label for="searchInput" class="sr-only"
+              >Search guides, error messages, and code</label
+            ><input
+              id="searchInput"
+              type="search"
+              autocomplete="off"
+              placeholder="Paste an error. Describe a bug. Find your way."
+            /><kbd>/</kbd>
+          </div>
+          <div class="search-hints">
+            <span>TRY A TRAIL</span
+            ><button type="button" data-query="stale closure">
+              stale closure <span>↗</span></button
+            ><button type="button" data-query="cors">CORS <span>↗</span></button
+            ><button type="button" data-query="docker">
+              Docker build <span>↗</span></button
+            ><span class="search-syntax"
+              >Supports <code>stack:react</code> and
+              <code>"exact phrases"</code></span
+            >
+          </div>
+        </section>
+        <div class="content-layout">
+          <section class="library" aria-labelledby="libraryTitle">
+            <div class="library-heading">
+              <div>
+                <h2 id="libraryTitle">
+                  The field manual <span id="resultCount">0</span>
+                </h2>
+                <p id="resultMeta" role="status">
+                  Real problems. Understandable solutions.
+                </p>
+              </div>
+              <button
+                class="text-button"
+                id="clearFilters"
+                type="button"
+                hidden
+              >
+                Clear filters <span>×</span>
+              </button>
+            </div>
+            <div class="filter-toolbar">
+              <div
+                class="category-tabs"
+                id="categoryTabs"
+                role="group"
+                aria-label="Guide categories"
+              >
+                <button
+                  class="active"
+                  type="button"
+                  data-category="all"
+                  aria-pressed="true"
+                >
+                  All guides</button
+                ><button
+                  type="button"
+                  data-category="frontend"
+                  aria-pressed="false"
+                >
+                  Frontend</button
+                ><button
+                  type="button"
+                  data-category="backend"
+                  aria-pressed="false"
+                >
+                  Backend</button
+                ><button
+                  type="button"
+                  data-category="devops"
+                  aria-pressed="false"
+                >
+                  DevOps</button
+                ><button
+                  type="button"
+                  data-category="data"
+                  aria-pressed="false"
+                >
+                  Data</button
+                ><button
+                  type="button"
+                  data-category="security"
+                  aria-pressed="false"
+                >
+                  Security
+                </button>
+              </div>
+              <div class="select-filters">
+                <select id="sourceSelect" aria-label="Library source">
+                  <option value="all">All sources</option>
+                  <option value="field">Field guides &amp; notes</option>
+                  <option value="stackoverflow">Stack Overflow Q&amp;A</option>
+                </select>
+                <select id="severitySelect" aria-label="Filter by severity">
+                  <option value="all">Any severity</option>
+                  <option value="critical">Critical</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option></select
+                ><select id="sortSelect" aria-label="Sort guides">
+                  <option value="recommended">Recommended</option>
+                  <option value="severity">Severity</option>
+                  <option value="title">Title A–Z</option>
+                  <option value="reading">Quickest read</option>
+                  <option value="votes">Most question votes</option>
+                  <option value="newest">Newest questions</option>
+                </select>
+              </div>
+            </div>
+            <div id="scenarioList" class="scenario-list"></div>
+            <div class="pagination" id="pagination">
+              <span id="pageInfo"></span>
+              <div>
+                <button
+                  id="prevPage"
+                  class="icon-button"
+                  type="button"
+                  aria-label="Previous page"
+                >
+                  <span data-icon="arrow-left"></span></button
+                ><span id="pageNumber"></span
+                ><button
+                  id="nextPage"
+                  class="icon-button"
+                  type="button"
+                  aria-label="Next page"
+                >
+                  <span data-icon="arrow-right"></span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <aside class="right-rail" aria-label="Collections and library tools">
+            <section class="kit-card">
+              <div class="kit-top">
+                <span class="eyebrow">BUILT FOR THE LONG RUN</span
+                ><span data-icon="compass"></span>
+              </div>
+              <h2>Your future self<br />will thank you.</h2>
+              <p>
+                The bug you solve today is the afternoon you save tomorrow.
+                Leave yourself a field note.
               </p>
-            </div>
-            <select id="sortSelect" aria-label="Sort scenarios">
-              <option value="relevance">Sort by relevance</option>
-              <option value="severity">Sort by severity</option>
-              <option value="stack">Sort by stack</option>
-              <option value="title">Sort by title</option>
-            </select>
-          </div>
-          <div id="scenarioList" class="scenario-list"></div>
-          <div class="pagination">
-            <button id="prevPage" type="button">Previous</button>
-            <span id="pageInfo"></span>
-            <button id="nextPage" type="button">Next</button>
-          </div>
-        </section>
-
-        <section class="detail-panel" aria-label="Selected scenario">
-          <div id="scenarioDetail" class="detail-empty">
-            <div class="empty-visual" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <h2>No issue selected</h2>
-            <p>Ready when you are.</p>
-          </div>
-        </section>
+              <button type="button" id="kitCreate">
+                Document a discovery <span>↗</span>
+              </button>
+              <div class="kit-footer">
+                <span class="status-dot"></span>STORED ON YOUR DEVICE
+              </div>
+            </section>
+            <section class="collections">
+              <div class="rail-title">
+                <h2>Take a trail</h2>
+                <span>03 COLLECTIONS</span>
+              </div>
+              <button type="button" data-collection="production">
+                <span class="collection-icon amber" data-icon="pulse"></span
+                ><span
+                  ><strong>Production is on fire</strong
+                  ><small>Find the signal. Stop the spiral.</small></span
+                ><span class="collection-arrow">↗</span></button
+              ><button type="button" data-collection="frontend">
+                <span class="collection-icon blue" data-icon="layout"></span
+                ><span
+                  ><strong>The UI has other plans</strong
+                  ><small>State, effects, and layout mysteries.</small></span
+                ><span class="collection-arrow">↗</span></button
+              ><button type="button" data-collection="data">
+                <span class="collection-icon purple" data-icon="database"></span
+                ><span
+                  ><strong>Trust your data again</strong
+                  ><small>Queries, transactions, and consistency.</small></span
+                ><span class="collection-arrow">↗</span>
+              </button>
+            </section>
+            <section class="offline-card">
+              <span data-icon="hard-drive"></span>
+              <div>
+                <h3>Ready for the disconnect.</h3>
+                <p id="offlineDescription">
+                  This library runs entirely on your device. No cloud required.
+                </p>
+                <button id="offlineButton" class="text-button" type="button">
+                  Check offline readiness <span>↗</span>
+                </button>
+              </div>
+            </section>
+            <section class="recent-section" id="recentSection" hidden>
+              <div class="rail-title"><h2>Recently explored</h2></div>
+              <div id="recentList"></div>
+            </section>
+            <p class="rail-note">
+              Knowledge is a tool.<br /><em>Understanding is a superpower.</em>
+            </p>
+          </aside>
+        </div>
+        <footer class="page-footer">
+          <span
+            >PATCH ATLAS <span class="footer-cross">✳</span> A little knowledge.
+            A lot of independence.</span
+          ><button id="footerHelp" type="button">
+            Made for curious humans <kbd>?</kbd>
+          </button>
+        </footer>
       </main>
     </div>
-
-    <template id="scenarioCardTemplate">
-      <article class="scenario-card">
-        <button type="button" class="card-main">
-          <span class="card-topline">
-            <span class="stack-pill"></span>
-            <span class="severity-pill"></span>
-          </span>
-          <strong></strong>
-          <span class="card-summary"></span>
-          <span class="tag-row"></span>
-        </button>
-      </article>
-    </template>
-
-    <dialog id="defectDialog" class="modal">
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+    <dialog
+      id="readerDialog"
+      class="reader-dialog"
+      aria-labelledby="readerTitle"
+    >
+      <div id="scenarioDetail"></div>
+    </dialog>
+    <dialog id="defectDialog" class="modal" aria-labelledby="defectDialogTitle">
       <form id="defectForm" class="modal-panel">
         <div class="modal-header">
           <div>
-            <p class="eyebrow">Local custom entry</p>
-            <h2>Create Defect</h2>
+            <p class="eyebrow">A DISCOVERY WORTH KEEPING</p>
+            <h2 id="defectDialogTitle">New field note</h2>
+            <p>Capture the why, not just the workaround.</p>
           </div>
           <button
             class="icon-button"
             type="button"
-            data-close-dialog
-            aria-label="Close"
+            data-close="defectDialog"
+            aria-label="Close field note form"
           >
-            x
+            <span data-icon="x"></span>
           </button>
         </div>
+        <input id="defectId" type="hidden" />
         <div class="form-grid">
-          <label>
-            <span>Title</span>
-            <input
+          <label class="wide"
+            >Title<input
               id="defectTitle"
               required
-              placeholder="Example: React custom multiselect loses selected values"
-            />
-          </label>
-          <label>
-            <span>Stack</span>
-            <select id="defectStack" required></select>
-          </label>
-          <label>
-            <span>Category</span>
-            <input id="defectCategory" required value="Custom defects" />
-          </label>
-          <label>
-            <span>Severity</span>
-            <select id="defectSeverity">
+              maxlength="180"
+              placeholder="What went wrong?" /></label
+          ><label>Stack<select id="defectStack" required></select></label
+          ><label
+            >Severity<select id="defectSeverity">
               <option value="medium">Medium</option>
               <option value="high">High</option>
               <option value="critical">Critical</option>
-            </select>
-          </label>
-          <label class="wide">
-            <span>Description</span>
-            <textarea id="defectSummary" required rows="3"></textarea>
-          </label>
-          <label class="wide">
-            <span>Symptoms, one per line</span>
-            <textarea id="defectSymptoms" rows="4"></textarea>
-          </label>
-          <label class="wide">
-            <span>Root Cause</span>
-            <textarea id="defectCause" rows="3"></textarea>
-          </label>
-          <label class="wide">
-            <span>Defective Code</span>
-            <textarea id="defectBadCode" rows="7" spellcheck="false"></textarea>
-          </label>
-          <label class="wide">
-            <span>Fixed Code</span>
-            <textarea
-              id="defectGoodCode"
-              rows="7"
+            </select></label
+          ><label class="wide"
+            >The short version<textarea
+              id="defectSummary"
+              required
+              maxlength="2000"
+              rows="2"
+              placeholder="What would help you recognize this next time?"
+            ></textarea></label
+          ><label class="wide"
+            >Symptoms <span class="field-hint">One per line</span
+            ><textarea id="defectSymptoms" rows="2"></textarea></label
+          ><label class="wide"
+            >Root cause<textarea id="defectCause" rows="2"></textarea></label
+          ><label class="wide"
+            >Broken example<textarea
+              id="defectBadCode"
+              class="code-input"
+              rows="4"
               spellcheck="false"
-            ></textarea>
-          </label>
-          <label class="wide">
-            <span>Solutions, one per line</span>
-            <textarea id="defectSolutions" rows="5"></textarea>
-          </label>
+            ></textarea></label
+          ><label class="wide"
+            >The fix<textarea
+              id="defectGoodCode"
+              class="code-input"
+              rows="5"
+              spellcheck="false"
+            ></textarea></label
+          ><label class="wide"
+            >Repair steps <span class="field-hint">One per line</span
+            ><textarea id="defectSolutions" rows="3"></textarea></label
+          ><label class="wide"
+            >How to verify <span class="field-hint">One check per line</span
+            ><textarea id="defectVerify" rows="2"></textarea></label
+          ><label class="wide"
+            >Tags <span class="field-hint">Separated by commas</span
+            ><input
+              id="defectTags"
+              maxlength="300"
+              placeholder="race-condition, caching, hard-earned-wisdom"
+          /></label>
         </div>
         <div class="modal-actions">
-          <button class="ghost-button" type="button" data-close-dialog>
-            Cancel
-          </button>
-          <button class="primary-button" type="submit">Save Defect</button>
+          <span>Saved in this browser. Back up to keep it portable.</span
+          ><button
+            class="secondary-button"
+            type="button"
+            data-close="defectDialog"
+          >
+            Cancel</button
+          ><button class="primary-button" type="submit">Save field note</button>
         </div>
       </form>
     </dialog>
-
-    <dialog id="descriptionDialog" class="modal">
-      <form id="descriptionForm" class="modal-panel compact">
+    <dialog
+      id="helpDialog"
+      class="modal compact-modal"
+      aria-labelledby="helpTitle"
+    >
+      <div class="modal-panel">
         <div class="modal-header">
           <div>
-            <p class="eyebrow">Edit item text</p>
-            <h2>Edit Description</h2>
+            <p class="eyebrow">FIND YOUR BEARINGS</p>
+            <h2 id="helpTitle">A few useful shortcuts</h2>
           </div>
           <button
             class="icon-button"
             type="button"
-            data-close-description
-            aria-label="Close"
+            data-close="helpDialog"
+            aria-label="Close help"
           >
-            x
+            <span data-icon="x"></span>
           </button>
         </div>
-        <label>
-          <span>Description</span>
-          <textarea id="descriptionText" required rows="6"></textarea>
-        </label>
-        <div class="modal-actions">
-          <button class="ghost-button" type="button" data-close-description>
-            Cancel
-          </button>
-          <button class="primary-button" type="submit">Save Description</button>
-        </div>
-      </form>
+        <dl class="shortcut-list">
+          <div>
+            <dt>Search the atlas</dt>
+            <dd><kbd>/</kbd> or <kbd>Ctrl / ⌘ K</kbd></dd>
+          </div>
+          <div>
+            <dt>New field note</dt>
+            <dd><kbd>N</kbd></dd>
+          </div>
+          <div>
+            <dt>Close a reader or dialog</dt>
+            <dd><kbd>Esc</kbd></dd>
+          </div>
+          <div>
+            <dt>Open this little guide</dt>
+            <dd><kbd>?</kbd></dd>
+          </div>
+        </dl>
+        <h3>Search like you mean it.</h3>
+        <p>
+          Use words in any order, paste an error, or narrow your search with
+          <code>stack:react</code>, <code>tag:async</code>, or
+          <code>"stale closure"</code>.
+        </p>
+        <h3>A library you own.</h3>
+        <p>
+          Bookmarks, notes, and checklist progress stay in this browser. Backup
+          downloads them as JSON; Restore merges a backup without removing your
+          existing notes.
+        </p>
+        <p class="muted">
+          Guides are illustrative starting points. Check the assumptions and
+          test the fix in your own environment. Official references need a
+          connection; guide content does not.
+        </p>
+      </div>
     </dialog>
-
-    <script src="app.js" defer></script>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <noscript
+      ><p class="noscript">
+        Enable JavaScript to browse Patch Atlas. It runs locally and never calls
+        an AI service.
+      </p></noscript
+    >
   </body>
 </html>

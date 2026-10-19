@@ -1,0 +1,8 @@
+{
+  "70817646|so-73203367": "Retained: react-markdown needs a JavaScript transformer, whereas uuid needs its CommonJS entry point resolved. Same error text, different repair.",
+  "72088446|so-68959632": "Retained: mismatched react-test-renderer version versus a data callback running before its input exists.",
+  "70737323|so-68959632": "Retained: missing mocked Express response in a unit test versus an Angular callback running before its input exists.",
+  "77355846|so-73285601": "Retained: Kubernetes reuses an old cached image after rebuilding, whereas the Docker question concerns building for the wrong CPU architecture.",
+  "79573352|so-68959632": "Retained: missing ThemeProvider in a test versus accessing not-yet-loaded application data.",
+  "79868016|so-72133316": "Retained: GPU libraries are available at container runtime, not image build time, whereas the other question concerns OpenSSL package compatibility. Different missing libraries and repairs."
+}

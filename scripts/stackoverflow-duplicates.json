@@ -1,0 +1,46 @@
+{
+  "72238175": {
+    "duplicateOf": "react-strict-cleanup",
+    "reason": "React 18 Strict Mode intentionally remounts effects in development; already covered by the existing cleanup guide."
+  },
+  "79914531": {
+    "duplicateOf": "react-stale-closure",
+    "reason": "An interval captures the initial timer state and stops decrementing; functional state updates and cleanup are already covered by the existing stale-closure guide."
+  },
+  "68465355": {
+    "duplicateOf": "shell-pipeline-failure",
+    "reason": "Same Bash pipefail exit-status mechanism and repair as the existing pipeline guide."
+  },
+  "70541068": {
+    "duplicateOf": "so-69087292",
+    "reason": "Same node-fetch v3 ESM-only change; both accepted answers recommend v2 or dynamic import."
+  },
+  "71831601": {
+    "duplicateOf": "so-71791347",
+    "reason": "Same duplicate React 18 type declarations in a React 17 dependency tree, repaired with package resolutions."
+  },
+  "71841181": {
+    "duplicateOf": "so-71791347",
+    "reason": "Same React 17/18 JSX type incompatibility; a second manifestation of the retained dependency-version question."
+  },
+  "73398714": {
+    "duplicateOf": "so-73285601",
+    "reason": "Same ARM versus AMD64 container architecture mismatch; retained answer also explains explicit target platforms."
+  },
+  "74705475": {
+    "duplicateOf": "so-73285601",
+    "reason": "Same M1 ARM versus AMD64 container architecture mismatch and platform selection repair."
+  },
+  "77973038": {
+    "duplicateOf": "so-76018702",
+    "reason": "Same Android Studio Compose template defaults hiding the Java language choice; retained question describes choosing a Views template."
+  },
+  "75821760": {
+    "duplicateOf": "so-69692842",
+    "reason": "Same legacy Webpack hashing incompatibility with OpenSSL 3 in newer Node releases; retained discussion covers updating dependencies and version-specific workarounds."
+  },
+  "74726224": {
+    "duplicateOf": "so-69692842",
+    "reason": "Same OpenSSL 3 digital envelope failure and legacy-provider workaround already covered in the retained question."
+  }
+}

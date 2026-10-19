@@ -1,0 +1,1775 @@
+{
+  "period": {
+    "from": "2021-01-01",
+    "through": "2026-10-19"
+  },
+  "selection": "Highest-voted open questions with accepted answers, per tag and creation year; not exhaustive.",
+  "perYearPerTag": 20,
+  "pagesPerYearPerTag": 1,
+  "tagMapping": {
+    "react": "reactjs",
+    "angular": "angular",
+    "java": "java",
+    "node": "node.js",
+    "typescript": "typescript",
+    "sql": "postgresql",
+    "git": "git",
+    "docker": "docker",
+    "css": "css",
+    "api": "rest",
+    "testing": "jestjs",
+    "ci": "github-actions",
+    "security": "oauth-2.0",
+    "performance": "performance",
+    "build": "webpack",
+    "cloud": "kubernetes",
+    "orm": "entity-framework-core",
+    "shell": "bash",
+    "python": "python",
+    "csharp": "c#"
+  },
+  "queries": [
+    {
+      "year": 2021,
+      "stack": "react",
+      "tag": "reactjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "angular",
+      "tag": "angular",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "java",
+      "tag": "java",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "node",
+      "tag": "node.js",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "typescript",
+      "tag": "typescript",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "sql",
+      "tag": "postgresql",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "git",
+      "tag": "git",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "docker",
+      "tag": "docker",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "css",
+      "tag": "css",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "api",
+      "tag": "rest",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "testing",
+      "tag": "jestjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "ci",
+      "tag": "github-actions",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "security",
+      "tag": "oauth-2.0",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "performance",
+      "tag": "performance",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "build",
+      "tag": "webpack",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "cloud",
+      "tag": "kubernetes",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "orm",
+      "tag": "entity-framework-core",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "shell",
+      "tag": "bash",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "python",
+      "tag": "python",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2021,
+      "stack": "csharp",
+      "tag": "c#",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "react",
+      "tag": "reactjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "angular",
+      "tag": "angular",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "java",
+      "tag": "java",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "node",
+      "tag": "node.js",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "typescript",
+      "tag": "typescript",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "sql",
+      "tag": "postgresql",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "git",
+      "tag": "git",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "docker",
+      "tag": "docker",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "css",
+      "tag": "css",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "api",
+      "tag": "rest",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "testing",
+      "tag": "jestjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "ci",
+      "tag": "github-actions",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "security",
+      "tag": "oauth-2.0",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "performance",
+      "tag": "performance",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "build",
+      "tag": "webpack",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "cloud",
+      "tag": "kubernetes",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "orm",
+      "tag": "entity-framework-core",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "shell",
+      "tag": "bash",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "python",
+      "tag": "python",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2022,
+      "stack": "csharp",
+      "tag": "c#",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "react",
+      "tag": "reactjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "angular",
+      "tag": "angular",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "java",
+      "tag": "java",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "node",
+      "tag": "node.js",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "typescript",
+      "tag": "typescript",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "sql",
+      "tag": "postgresql",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "git",
+      "tag": "git",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "docker",
+      "tag": "docker",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "css",
+      "tag": "css",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "api",
+      "tag": "rest",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "testing",
+      "tag": "jestjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "ci",
+      "tag": "github-actions",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "security",
+      "tag": "oauth-2.0",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "performance",
+      "tag": "performance",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "build",
+      "tag": "webpack",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "cloud",
+      "tag": "kubernetes",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "orm",
+      "tag": "entity-framework-core",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "shell",
+      "tag": "bash",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "python",
+      "tag": "python",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2023,
+      "stack": "csharp",
+      "tag": "c#",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "react",
+      "tag": "reactjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "angular",
+      "tag": "angular",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "java",
+      "tag": "java",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "node",
+      "tag": "node.js",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "typescript",
+      "tag": "typescript",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "sql",
+      "tag": "postgresql",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "git",
+      "tag": "git",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "docker",
+      "tag": "docker",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "css",
+      "tag": "css",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "api",
+      "tag": "rest",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "testing",
+      "tag": "jestjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "ci",
+      "tag": "github-actions",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "security",
+      "tag": "oauth-2.0",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "performance",
+      "tag": "performance",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "build",
+      "tag": "webpack",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "cloud",
+      "tag": "kubernetes",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "orm",
+      "tag": "entity-framework-core",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "shell",
+      "tag": "bash",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "python",
+      "tag": "python",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2024,
+      "stack": "csharp",
+      "tag": "c#",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "react",
+      "tag": "reactjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "angular",
+      "tag": "angular",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "java",
+      "tag": "java",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "node",
+      "tag": "node.js",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "typescript",
+      "tag": "typescript",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "sql",
+      "tag": "postgresql",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "git",
+      "tag": "git",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "docker",
+      "tag": "docker",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "css",
+      "tag": "css",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "api",
+      "tag": "rest",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "testing",
+      "tag": "jestjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "ci",
+      "tag": "github-actions",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "security",
+      "tag": "oauth-2.0",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "performance",
+      "tag": "performance",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "build",
+      "tag": "webpack",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "cloud",
+      "tag": "kubernetes",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "orm",
+      "tag": "entity-framework-core",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "shell",
+      "tag": "bash",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "python",
+      "tag": "python",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2025,
+      "stack": "csharp",
+      "tag": "c#",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "react",
+      "tag": "reactjs",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "angular",
+      "tag": "angular",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "java",
+      "tag": "java",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "node",
+      "tag": "node.js",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "typescript",
+      "tag": "typescript",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "sql",
+      "tag": "postgresql",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "git",
+      "tag": "git",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "docker",
+      "tag": "docker",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "css",
+      "tag": "css",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "api",
+      "tag": "rest",
+      "page": 1,
+      "returned": 10,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "testing",
+      "tag": "jestjs",
+      "page": 1,
+      "returned": 2,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "ci",
+      "tag": "github-actions",
+      "page": 1,
+      "returned": 8,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "security",
+      "tag": "oauth-2.0",
+      "page": 1,
+      "returned": 6,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "performance",
+      "tag": "performance",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "build",
+      "tag": "webpack",
+      "page": 1,
+      "returned": 3,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "cloud",
+      "tag": "kubernetes",
+      "page": 1,
+      "returned": 6,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "orm",
+      "tag": "entity-framework-core",
+      "page": 1,
+      "returned": 20,
+      "hasMore": false
+    },
+    {
+      "year": 2026,
+      "stack": "shell",
+      "tag": "bash",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "python",
+      "tag": "python",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    },
+    {
+      "year": 2026,
+      "stack": "csharp",
+      "tag": "c#",
+      "page": 1,
+      "returned": 20,
+      "hasMore": true
+    }
+  ],
+  "skipped": [
+    {
+      "questionId": 69692842,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 66239691,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67652612,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 68774489,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 69554485,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 66963289,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 69866581,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67044273,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67872622,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 65554910,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 68241263,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 68655492,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 69227566,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67063993,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67352418,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67872622,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 65554910,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 66335225,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 69692842,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 69300341,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 68707553,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 65627536,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 69427025,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 67534732,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 68673221,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 65806330,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 68938628,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71913692,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 70958371,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71788254,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 74421327,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 72013449,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71713405,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 70564950,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 74297001,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71463698,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 73967855,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71831601,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71841181,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71265042,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71186718,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 72013449,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 73203367,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71685441,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 73607410,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 70663523,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71041836,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 71083110,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 70582072,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 72070748,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 70643895,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75124513,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76253884,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77454741,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76996326,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76224848,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75317224,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76603369,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75047760,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75157299,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77663053,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77021471,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77483538,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76684273,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77272149,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77011224,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76149300,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77634955,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75354384,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77374754,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77703991,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 76809859,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75604903,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 75255056,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78343601,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78445719,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77772200,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79267404,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78790943,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79143162,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78135603,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78054768,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79300987,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79204594,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78445719,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77914354,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79048814,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77980939,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78757481,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78085423,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78329576,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78173983,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 77802646,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78466171,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78653873,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78438525,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79266824,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79048814,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78903499,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78027957,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79275170,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78085423,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 78108792,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79398887,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79372334,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79756341,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79491725,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79656877,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79553495,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79540647,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79645153,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79623674,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79628505,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79781811,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79352812,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79691641,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79705915,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79703908,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79847871,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79380519,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79544983,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79855462,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79450537,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79382491,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79675833,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79497226,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79473778,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79776829,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79660611,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79675833,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79372128,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79793856,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79884439,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79869166,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79893083,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 80005191,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79900226,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79944447,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79907758,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79899526,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79886849,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79883870,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79908137,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79865723,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79869166,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79903333,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79907284,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79877830,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79896876,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79945536,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79908514,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79946863,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 79991980,
+      "reason": "same-question-cross-tag"
+    },
+    {
+      "questionId": 70541068,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-69087292",
+      "reviewNote": "Same node-fetch v3 ESM-only change; both accepted answers recommend v2 or dynamic import."
+    },
+    {
+      "questionId": 72238175,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "react-strict-cleanup",
+      "reviewNote": "React 18 Strict Mode intentionally remounts effects in development; already covered by the existing cleanup guide."
+    },
+    {
+      "questionId": 68465355,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "shell-pipeline-failure",
+      "reviewNote": "Same Bash pipefail exit-status mechanism and repair as the existing pipeline guide."
+    },
+    {
+      "questionId": 74726224,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-69692842",
+      "reviewNote": "Same OpenSSL 3 digital envelope failure and legacy-provider workaround already covered in the retained question."
+    },
+    {
+      "questionId": 71831601,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-71791347",
+      "reviewNote": "Same duplicate React 18 type declarations in a React 17 dependency tree, repaired with package resolutions."
+    },
+    {
+      "questionId": 73398714,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-73285601",
+      "reviewNote": "Same ARM versus AMD64 container architecture mismatch; retained answer also explains explicit target platforms."
+    },
+    {
+      "questionId": 71841181,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-71791347",
+      "reviewNote": "Same React 17/18 JSX type incompatibility; a second manifestation of the retained dependency-version question."
+    },
+    {
+      "questionId": 74705475,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-73285601",
+      "reviewNote": "Same M1 ARM versus AMD64 container architecture mismatch and platform selection repair."
+    },
+    {
+      "questionId": 73297967,
+      "reason": "normalized-title",
+      "duplicateOf": "so-73156911"
+    },
+    {
+      "questionId": 77973038,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-76018702",
+      "reviewNote": "Same Android Studio Compose template defaults hiding the Java language choice; retained question describes choosing a Views template."
+    },
+    {
+      "questionId": 74565951,
+      "reason": "unsupported-license"
+    },
+    {
+      "questionId": 79072284,
+      "reason": "unsupported-license"
+    },
+    {
+      "questionId": 79868847,
+      "reason": "accepted-answer-unavailable"
+    },
+    {
+      "questionId": 75821760,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "so-69692842",
+      "reviewNote": "Same legacy Webpack hashing incompatibility with OpenSSL 3 in newer Node releases; retained discussion covers updating dependencies and version-specific workarounds."
+    },
+    {
+      "questionId": 79914531,
+      "reason": "reviewed-semantic-duplicate",
+      "duplicateOf": "react-stale-closure",
+      "reviewNote": "An interval captures the initial timer state and stops decrementing; functional state updates and cleanup are already covered by the existing stale-closure guide."
+    }
+  ],
+  "nearDuplicates": [
+    {
+      "questionId": 70817646,
+      "compareWith": "so-73203367",
+      "similarity": 0.625,
+      "status": "reviewed-distinct",
+      "reviewNote": "Retained: react-markdown needs a JavaScript transformer, whereas uuid needs its CommonJS entry point resolved. Same error text, different repair."
+    },
+    {
+      "questionId": 72088446,
+      "compareWith": "so-68959632",
+      "similarity": 0.667,
+      "status": "reviewed-distinct",
+      "reviewNote": "Retained: mismatched react-test-renderer version versus a data callback running before its input exists."
+    },
+    {
+      "questionId": 70737323,
+      "compareWith": "so-68959632",
+      "similarity": 0.6,
+      "status": "reviewed-distinct",
+      "reviewNote": "Retained: missing mocked Express response in a unit test versus an Angular callback running before its input exists."
+    },
+    {
+      "questionId": 77355846,
+      "compareWith": "so-73285601",
+      "similarity": 0.778,
+      "status": "reviewed-distinct",
+      "reviewNote": "Retained: Kubernetes reuses an old cached image after rebuilding, whereas the Docker question concerns building for the wrong CPU architecture."
+    },
+    {
+      "questionId": 79573352,
+      "compareWith": "so-68959632",
+      "similarity": 0.625,
+      "status": "reviewed-distinct",
+      "reviewNote": "Retained: missing ThemeProvider in a test versus accessing not-yet-loaded application data."
+    },
+    {
+      "questionId": 79868016,
+      "compareWith": "so-72133316",
+      "similarity": 0.625,
+      "status": "reviewed-distinct",
+      "reviewNote": "Retained: GPU libraries are available at container runtime, not image build time, whereas the other question concerns OpenSSL package compatibility. Different missing libraries and repairs."
+    }
+  ],
+  "transformations": "HTML converted to safe text/code blocks; link destinations retained; images represented by alt text and URL. Credential-shaped eBay identifiers removed. No answer rewriting.",
+  "deduplication": "Question ID; normalized title; identical question/answer bodies; title-token Jaccard >= 0.86 for same stack (at least four tokens). Borderline title similarities >= 0.60 reported for review, not automatically deleted.",
+  "imported": 2147,
+  "authoredGuidesCompared": 48,
+  "byYear": {
+    "2021": 371,
+    "2022": 368,
+    "2023": 376,
+    "2024": 369,
+    "2025": 371,
+    "2026": 292
+  },
+  "byStack": {
+    "angular": 118,
+    "api": 109,
+    "build": 94,
+    "ci": 97,
+    "cloud": 103,
+    "csharp": 110,
+    "css": 116,
+    "docker": 113,
+    "git": 118,
+    "java": 119,
+    "node": 100,
+    "orm": 114,
+    "performance": 116,
+    "python": 110,
+    "react": 116,
+    "security": 105,
+    "shell": 115,
+    "sql": 118,
+    "testing": 93,
+    "typescript": 63
+  },
+  "skipReasons": {
+    "same-question-cross-tag": 153,
+    "reviewed-semantic-duplicate": 11,
+    "normalized-title": 1,
+    "unsupported-license": 2,
+    "accepted-answer-unavailable": 1
+  }
+}
